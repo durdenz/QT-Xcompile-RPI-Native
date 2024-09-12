@@ -184,4 +184,6 @@ set(XCB_XCB_LIBRARY ${XCB_PATH_VARIABLE}/usr/lib/aarch64-linux-gnu/libxcb.so)`
         - `cd ~`
         - `./gui_analogclock`
         
-
+# Building and Running from QT Creator
+    1. TO Configure QT Creator on the host to build, deploy, and run the application on the RPI and display in a window on the host, See the last section of the link below:
+    - https://wiki.qt.io/Cross-Compile_Qt_6_for_Raspberry_Pi
