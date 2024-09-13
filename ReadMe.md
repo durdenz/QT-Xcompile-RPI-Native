@@ -28,11 +28,10 @@
         - `sudo apt-get install make cmake build-essential libclang-dev clang ninja-build gcc git bison python3 gperf pkg-config libfontconfig1-dev libfreetype6-dev libx11-dev libx11-xcb-dev libxext-dev libxfixes-dev libxi-dev libxrender-dev libxcb1-dev libxcb-glx0-dev libxcb-keysyms1-dev libxcb-image0-dev libxcb-shm0-dev libxcb-icccm4-dev libxcb-sync-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-render-util0-dev libxcb-util-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev libatspi2.0-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev`
     3. Install Cross Compiler
         - `sudo apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu`
-
 # Set Up SSH Connection
     1. Configure SSH between Host and RPI
         - Create SSH Keys on Host
-        - `ssh-keygen`
+`ssh-keygen`
         - SSH into RPI from Host to force trusted host entry 
         - `ssh gadiv@192.168.1.11`
         - `exit`
@@ -42,7 +41,7 @@
         - `exit`
 # Build SYSROOT from RPI into Host
     1. On Host: Install rsync for transfer
-        - `sudo apt install rsync`
+`sudo apt install rsync`
     2. On Host: Transfer SYSROOT Directories from RPI to Host
         - `cd $HOME`
         - `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/lib/* rpi-sysroot/lib`
@@ -53,17 +52,17 @@
         - `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/opt/vc rpi-sysroot/opt/vc`
 # Fix SymLinks on Host
     1. Install symlinks tool
-        - `audo apt install symlinks`
+`audo apt install symlinks`
     2. Use symlinks tool to fix broken symlinks
         - `cd ~`
         - `symlinks -rc rpi-sysroot`
 # Building QT6
 ## Building QT6 on Host machine
-    - `cd $HOME`
-    - `git clone "https://codereview.qt-project.org/qt/qt5"`
-    - `cd qt5/`
-    - `git checkout 6.4.0`
-    - `perl init-repository -f`
+`cd $HOME`
+`git clone "https://codereview.qt-project.org/qt/qt5"`
+`cd qt5/`
+`git checkout 6.4.0`
+`perl init-repository -f`
     - `cd ..`
     - `mkdir $HOME/qt-hostbuild`
     - `cd $HOME/qt-hostbuild/`
