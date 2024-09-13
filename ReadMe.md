@@ -75,7 +75,8 @@
     - `cd ~`
     - `code toolchain.cmake`
     2. Place the following into the toolchain.cmake file:
-`cmake_minimum_required(VERSION 3.18)
+```cmake 
+cmake_minimum_required(VERSION 3.18)
 include_guard(GLOBAL)
 
 set(CMAKE_SYSTEM_NAME Linux)
@@ -151,7 +152,8 @@ set(Libdrm_INCLUDE_DIR ${GL_INC_DIR})
 set(Libdrm_LIBRARY ${XCB_PATH_VARIABLE}/usr/lib/aarch64-linux-gnu/libdrm.so)
 
 set(XCB_XCB_INCLUDE_DIR ${GL_INC_DIR})
-set(XCB_XCB_LIBRARY ${XCB_PATH_VARIABLE}/usr/lib/aarch64-linux-gnu/libxcb.so)`
+set(XCB_XCB_LIBRARY ${XCB_PATH_VARIABLE}/usr/lib/aarch64-linux-gnu/libxcb.so)
+```
 
 2. Change into the Build directory
     - `cd ~/qtpi-build`
