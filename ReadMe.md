@@ -40,7 +40,7 @@
         - [x] `ssh-copy-id gadiv@192.168.1.11`
         - [x] `ssh gadiv@192.168.1.11`
         - [x] `exit`
-# Build SYSROOT from RPI into Host
+# Build SYSROOT for RPI from Host
 1. On Host: Install rsync for transfer
     -[x] `sudo apt install rsync`
 2. On Host: Transfer SYSROOT Directories from RPI to Host
@@ -70,7 +70,7 @@
 [x] `cmake ../qt5/ -GNinja -DCMAKE_BUILD_TYPE=Release -DQT_BUILD_EXAMPLES=OFF -DQT_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=$HOME/qt-host`
 [x] `cmake --build . --parallel 8`
 [] `cmake --install .`
-2. Build QT6 on RPI
+2. Build QT6 for RPI on Host
     1. Create a toolchain file
     - [] `cd ~`
     - [] `code toolchain.cmake`
