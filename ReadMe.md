@@ -4,76 +4,76 @@
 1. Clone Ubuntu 200GB Host for Xcompile Host
     - Named: QT-XCompile-RPI-Native-Host
 2. Create Directories on Host Machine:
-    - `cd ~`
-    - `mkdir rpi-sysroot rpi-sysroot/usr rpi-sysroot/opt`
-    - `mkdir qt-host qt-raspi qt-hostbuild qtpi-build`
+    - [x] `cd ~`
+    - [x] `mkdir rpi-sysroot rpi-sysroot/usr rpi-sysroot/opt`
+    - [x] `mkdir qt-host qt-raspi qt-hostbuild qtpi-build`
 
 # RPI4
 1. Install Dependencies
     - Update System to latest Updates
-    - `$ sudo apt update`
-    - `$ sudo apt full-upgrade`
-    - `$ sudo reboot`
+    - [x] `$ sudo apt update`
+    - [x] `$ sudo apt full-upgrade`
+    - [x] `$ sudo reboot`
     - Install Package Dependencies
-    - `$ sudo apt-get install libboost-all-dev libudev-dev libinput-dev libts-dev libmtdev-dev libjpeg-dev libfontconfig1-dev libssl-dev libdbus-1-dev libglib2.0-dev libxkbcommon-dev libegl1-mesa-dev libgbm-dev libgles2-mesa-dev mesa-common-dev libasound2-dev libpulse-dev gstreamer1.0-omx libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev  gstreamer1.0-alsa libvpx-dev libsrtp2-dev libsnappy-dev libnss3-dev "^libxcb.*" flex bison libxslt-dev ruby gperf libbz2-dev libcups2-dev libatkmm-1.6-dev libxi6 libxcomposite1 libfreetype6-dev libicu-dev libsqlite3-dev libxslt1-dev`
-    - `$ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libx11-dev freetds-dev libpq-dev libiodbc2-dev firebird-dev libgst-dev libxext-dev libxcb1 libxcb1-dev libx11-xcb1 libx11-xcb-dev libxcb-keysyms1 libxcb-keysyms1-dev libxcb-image0 libxcb-image0-dev libxcb-shm0 libxcb-shm0-dev libxcb-icccm4 libxcb-icccm4-dev libxcb-sync1 libxcb-sync-dev libxcb-render-util0 libxcb-render-util0-dev libxcb-xfixes0-dev libxrender-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-glx0-dev libxi-dev libdrm-dev libxcb-xinerama0 libxcb-xinerama0-dev libatspi2.0-dev libxcursor-dev libxcomposite-dev libxdamage-dev libxss-dev libxtst-dev libpci-dev libcap-dev libxrandr-dev libdirectfb-dev libaudio-dev libxkbcommon-x11-dev`
+    - [x] `$ sudo apt-get install libboost-all-dev libudev-dev libinput-dev libts-dev libmtdev-dev libjpeg-dev libfontconfig1-dev libssl-dev libdbus-1-dev libglib2.0-dev libxkbcommon-dev libegl1-mesa-dev libgbm-dev libgles2-mesa-dev mesa-common-dev libasound2-dev libpulse-dev gstreamer1.0-omx libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev  gstreamer1.0-alsa libvpx-dev libsrtp2-dev libsnappy-dev libnss3-dev "^libxcb.*" flex bison libxslt-dev ruby gperf libbz2-dev libcups2-dev libatkmm-1.6-dev libxi6 libxcomposite1 libfreetype6-dev libicu-dev libsqlite3-dev libxslt1-dev`
+    - [x] `$ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libx11-dev freetds-dev libpq-dev libiodbc2-dev firebird-dev libgst-dev libxext-dev libxcb1 libxcb1-dev libx11-xcb1 libx11-xcb-dev libxcb-keysyms1 libxcb-keysyms1-dev libxcb-image0 libxcb-image0-dev libxcb-shm0 libxcb-shm0-dev libxcb-icccm4 libxcb-icccm4-dev libxcb-sync1 libxcb-sync-dev libxcb-render-util0 libxcb-render-util0-dev libxcb-xfixes0-dev libxrender-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-glx0-dev libxi-dev libdrm-dev libxcb-xinerama0 libxcb-xinerama0-dev libatspi2.0-dev libxcursor-dev libxcomposite-dev libxdamage-dev libxss-dev libxtst-dev libpci-dev libcap-dev libxrandr-dev libdirectfb-dev libaudio-dev libxkbcommon-x11-dev`
     - Create directory for QT installation targeting RPI
-    -`$ sudo mkdir /usr/local/qt6`
+    - [x] `$ sudo mkdir /usr/local/qt6`
 
 # Host Machine - Setting up Host Machine
 1. Update Host Systen
-    - `sudo apt update`
-    - `sudo apt upgrade`
+    - [x] `sudo apt update`
+    - [x] `sudo apt upgrade`
 2. Install QT Dependencies
-    - `sudo apt-get install make cmake build-essential libclang-dev clang ninja-build gcc git bison python3 gperf pkg-config libfontconfig1-dev libfreetype6-dev libx11-dev libx11-xcb-dev libxext-dev libxfixes-dev libxi-dev libxrender-dev libxcb1-dev libxcb-glx0-dev libxcb-keysyms1-dev libxcb-image0-dev libxcb-shm0-dev libxcb-icccm4-dev libxcb-sync-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-render-util0-dev libxcb-util-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev libatspi2.0-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev`
+    - [x] `sudo apt-get install make cmake build-essential libclang-dev clang ninja-build gcc git bison python3 gperf pkg-config libfontconfig1-dev libfreetype6-dev libx11-dev libx11-xcb-dev libxext-dev libxfixes-dev libxi-dev libxrender-dev libxcb1-dev libxcb-glx0-dev libxcb-keysyms1-dev libxcb-image0-dev libxcb-shm0-dev libxcb-icccm4-dev libxcb-sync-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-render-util0-dev libxcb-util-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev libatspi2.0-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev`
 3. Install Cross Compiler
-    - `sudo apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu`
+    - [x] `sudo apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu`
 
 # Set Up SSH Connection
 1. Configure SSH between Host and RPI
     - Create SSH Keys on Host
-        - `ssh-keygen`
+        - [x] `ssh-keygen`
         - SSH into RPI from Host to force trusted host entry 
-        - `ssh gadiv@192.168.1.11`
-        - `exit`
+        - [x] `ssh gadiv@192.168.1.11`
+        - [x] `exit`
         - Copy public key from host to RPI to enable SSH without password
-        - `ssh-copy-id gadiv@192.168.1.11`
-        - `ssh gadiv@192.168.1.11`
-        - `exit`
+        - [x] `ssh-copy-id gadiv@192.168.1.11`
+        - [x] `ssh gadiv@192.168.1.11`
+        - [x] `exit`
 # Build SYSROOT from RPI into Host
 1. On Host: Install rsync for transfer
-    -`sudo apt install rsync`
+    -[x] `sudo apt install rsync`
 2. On Host: Transfer SYSROOT Directories from RPI to Host
-    - `cd $HOME`
-    - `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/lib/* rpi-sysroot/lib`
-    - `mkdir $HOME/rpi-sysroot/usr`
-    - `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/usr/include/* rpi-sysroot/usr/include`
-    - `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/usr/lib/* rpi-sysroot/usr/lib`
-    - `mkdir $HOME/rpi-sysroot/opt`
-    - `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/opt/vc rpi-sysroot/opt/vc`
+    - [x] `cd $HOME`
+    - [x] `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/lib/* rpi-sysroot/lib`
+    - [x] `mkdir $HOME/rpi-sysroot/usr`
+    - [x] `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/usr/include/* rpi-sysroot/usr/include`
+    - [x] `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/usr/lib/* rpi-sysroot/usr/lib`
+    - [x] `mkdir $HOME/rpi-sysroot/opt`
+    - [] `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/opt/vc rpi-sysroot/opt/vc` ** No/opt/vc/ folder on RPI
 # Fix SymLinks on Host
 1. Install symlinks tool
-    - `audo apt install symlinks`
+    - [x] `sudo apt install symlinks`
 2. Use symlinks tool to fix broken symlinks
-    - `cd ~`
-    - `symlinks -rc rpi-sysroot`
+    - [x] `cd ~`
+    - [x] `symlinks -rc rpi-sysroot`
 # Building QT6
 1. Build QT6 on Host machine
-`cd $HOME`
-`git clone "https://codereview.qt-project.org/qt/qt5"`
-`cd qt5/`
-`git checkout 6.4.0`
-`perl init-repository -f`
-`cd ..`
-`mkdir $HOME/qt-hostbuild`
-`cd $HOME/qt-hostbuild/`
-`cmake ../qt5/ -GNinja -DCMAKE_BUILD_TYPE=Release -DQT_BUILD_EXAMPLES=OFF -DQT_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=$HOME/qt-host`
-`cmake --build . --parallel 8`
-`cmake --install .`
+[x] `cd $HOME`
+[x] `git clone "https://codereview.qt-project.org/qt/qt5"`
+[x] `cd qt5/`
+[x] `git checkout 6.4.0`
+[x] `perl init-repository -f`
+[x] `cd ..`
+[x] `mkdir $HOME/qt-hostbuild`
+[x] `cd $HOME/qt-hostbuild/`
+[x] `cmake ../qt5/ -GNinja -DCMAKE_BUILD_TYPE=Release -DQT_BUILD_EXAMPLES=OFF -DQT_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=$HOME/qt-host`
+[x] `cmake --build . --parallel 8`
+[] `cmake --install .`
 2. Build QT6 on RPI
     1. Create a toolchain file
-    - `cd ~`
-    - `code toolchain.cmake`
+    - [] `cd ~`
+    - [] `code toolchain.cmake`
     2. Place the following into the toolchain.cmake file:
 ```cmake 
 cmake_minimum_required(VERSION 3.18)
