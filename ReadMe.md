@@ -50,7 +50,7 @@
     - [x] `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/usr/include/* rpi-sysroot/usr/include`
     - [x] `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/usr/lib/* rpi-sysroot/usr/lib`
     - [x] `mkdir $HOME/rpi-sysroot/opt`
-    - [] `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/opt/vc rpi-sysroot/opt/vc` ** No/opt/vc/ folder on RPI
+    - [ ] `rsync -avzS --rsync-path="rsync" --delete gadiv@192.168.1.11:/opt/vc rpi-sysroot/opt/vc` ** No/opt/vc/ folder on RPI
 # Fix SymLinks on Host
 1. Install symlinks tool
     - [x] `sudo apt install symlinks`
