@@ -89,9 +89,9 @@ set(ENV{PKG_CONFIG_PATH} $PKG_CONFIG_PATH:/usr/lib/aarch64-linux-gnu/pkgconfig)
 set(ENV{PKG_CONFIG_LIBDIR} /usr/lib/pkgconfig:/usr/share/pkgconfig/:${TARGET_SYSROOT}/usr/lib/aarch64-linux-gnu/pkgconfig:${TARGET_SYSROOT}/usr/lib/pkgconfig)
 set(ENV{PKG_CONFIG_SYSROOT_DIR} ${CMAKE_SYSROOT})
 
-# if you use other version of gcc and g++ than gcc/g++ 9, you must change the following variables
-set(CMAKE_C_COMPILER /usr/bin/aarch64-linux-gnu-gcc-9)
-set(CMAKE_CXX_COMPILER /usr/bin/aarch64-linux-gnu-g++-9)
+# if you use other version of gcc and g++ than gcc/g++ 11, you must change the following variables
+set(CMAKE_C_COMPILER /usr/bin/aarch64-linux-gnu-gcc-11)
+set(CMAKE_CXX_COMPILER /usr/bin/aarch64-linux-gnu-g++-11)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -I${TARGET_SYSROOT}/usr/include")
 set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS}")
@@ -156,35 +156,35 @@ set(XCB_XCB_LIBRARY ${XCB_PATH_VARIABLE}/usr/lib/aarch64-linux-gnu/libxcb.so)
 ```
 
 2. Change into the Build directory
-    - `cd ~/qtpi-build`
+    - [x] `cd ~/qtpi-build`
 3. Run the configuration command:
-    - `../qt5/configure -release -opengl es2 -nomake examples -nomake tests -qt-host-path $HOME/qt-host -extprefix $HOME/qt-raspi -prefix /usr/local/qt6 -device linux-rasp-pi4-aarch64 -device-option CROSS_COMPILE=aarch64-linux-gnu- -- -DCMAKE_TOOLCHAIN_FILE=$HOME/toolchain.cmake -DQT_FEATURE_xcb=ON -DFEATURE_xcb_xlib=ON -DQT_FEATURE_xlib=ON`
+    - [ ] `../qt5/configure -release -opengl es2 -nomake examples -nomake tests -qt-host-path $HOME/qt-host -extprefix $HOME/qt-raspi -prefix /usr/local/qt6 -device linux-rasp-pi4-aarch64 -device-option CROSS_COMPILE=aarch64-linux-gnu- -- -DCMAKE_TOOLCHAIN_FILE=$HOME/toolchain.cmake -DQT_FEATURE_xcb=ON -DFEATURE_xcb_xlib=ON -DQT_FEATURE_xlib=ON`
 4. Proceed with the Build and Install
-    - `cmake --build . --parallel 4`
-    - `cmake --install .`
+    - [ ] `cmake --build . --parallel 4`
+    - [ ] `cmake --install .`
 5. Send the Build to the RPI using rsync:
-    - `rsync -avz --rsync-path="sudo rsync" /path/to/qt-raspi/* gadiv@192.168.1.11:/usr/local/qt6`
+    - [ ] `rsync -avz --rsync-path="sudo rsync" /path/to/qt-raspi/* gadiv@192.168.1.11:/usr/local/qt6`
 # Final Configuration on RPI
 1. Setup Environment Variables
     - ssh into RPI from Host
-        - `ssh gadiv@192.168.1.11`
-        - `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/qt6/lib/`
+        - [ ] `ssh gadiv@192.168.1.11`
+        - [ ] `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/qt6/lib/`
         - If you plan to run QT Application on RPI via SSH from the Host and Display on Monitor connected to RPI then Set DISPLAY Environment Variable:
-        - `export $DISPLAY=:0`
+        - [ ] `export $DISPLAY=:0`
 # Compiling and Running QT Project
 1. On Host in Terminal:
-    - `cd ~/qt5/qtbase/examples/gui/analogclock/`
-    - `ls ## make sure there is a CMakeLists.txt file`
-    - `~/qt-raspi/bin/qt-cmake CMakeLists.txt`
-    - `cmake --build . --parallel 4`
-    - `cmake --install .`
+    - [ ] `cd ~/qt5/qtbase/examples/gui/analogclock/`
+    - [ ] `ls ## make sure there is a CMakeLists.txt file`
+    - [ ] `~/qt-raspi/bin/qt-cmake CMakeLists.txt`
+    - [ ] `cmake --build . --parallel 4`
+    - [ ] `cmake --install .`
 2. On Host: Send Application Binary to RPI
-    - `scp -r gui_analogclock <gadiv@192.168.1.11:/home/gadiv`
-    - `ssh gadiv@192.168.1.11`
-    - `cd ~ ## or cd to the directory where you send the binary`
+    - [ ] `scp -r gui_analogclock <gadiv@192.168.1.11:/home/gadiv`
+    - [ ] `ssh gadiv@192.168.1.11`
+    - [ ] `cd ~ ## or cd to the directory where you send the binary`
 3. On the RPI: Run the application
-    - `cd ~`
-    - `./gui_analogclock`
+    - [ ] `cd ~`
+    - [ ] `./gui_analogclock`
         
 # Building and Running from QT Creator
 1. TO Configure QT Creator on the host to build, deploy, and run the application on the RPI and display in a window on the host, See the last section of the link below:
