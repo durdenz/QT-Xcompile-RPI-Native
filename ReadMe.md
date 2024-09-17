@@ -69,11 +69,11 @@
     - [x] `cd $HOME/qt-hostbuild/`
     - [x] `cmake ../qt5/ -GNinja -DCMAKE_BUILD_TYPE=Release -DQT_BUILD_EXAMPLES=OFF -DQT_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=$HOME/qt-host`
     - [x] `cmake --build . --parallel 8`
-    - [ ] `cmake --install .`
+    - [x] `cmake --install .`
 2. Build QT6 for RPI on Host
     1. Create a toolchain file
-    - [ ] `cd ~`
-    - [ ] `code toolchain.cmake`
+    - [x] `cd ~`
+    - [x] `code toolchain.cmake`
     2. Place the following into the toolchain.cmake file:
 ```cmake 
 cmake_minimum_required(VERSION 3.18)
