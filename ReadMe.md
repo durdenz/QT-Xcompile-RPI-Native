@@ -160,7 +160,7 @@ set(XCB_XCB_LIBRARY ${XCB_PATH_VARIABLE}/usr/lib/aarch64-linux-gnu/libxcb.so)
 
 2. Change into the Build directory
     - [x] `cd ~/qtpi-build`
-3. Run the configuration command: <Breaking Here>
+3. Run the configuration command: ***Breaking Here***
     - [x] `../qt5/configure -release -opengl es2 -nomake examples -nomake tests -qt-host-path $HOME/qt-host -extprefix $HOME/qt-raspi -prefix /usr/local/qt6 -device linux-rasp-pi4-aarch64 -device-option CROSS_COMPILE=aarch64-linux-gnu- -- -DCMAKE_TOOLCHAIN_FILE=$HOME/toolchain.cmake -DQT_FEATURE_xcb=ON -DFEATURE_xcb_xlib=ON -DQT_FEATURE_xlib=ON`
 4. Proceed with the Build and Install
     - [ ] `cmake --build . --parallel 4`
