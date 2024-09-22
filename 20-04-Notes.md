@@ -37,3 +37,7 @@ sudo apt-get install cmake
 # References:
 1. https://apt.kitware.com/ <--This works-->
 2. https://stackoverflow.com/questions/49859457/how-to-reinstall-the-latest-cmake-version
+3. https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
+4. https://stackoverflow.com/questions/67541374/nvm-getting-permission-denied-with-nvm-install-command
+5. 
+
